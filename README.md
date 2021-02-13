@@ -12,6 +12,10 @@ Using [vue-custom-element](https://github.com/karol-f/vue-custom-element) we can
 
 This repo is just an example. To use these clone the repo and apply the code to your specific use case.
 
+## Demo
+
+https://johanneshoppe.github.io/trading-vue-js-web-component-example/
+
 
 ## Project setup
 ```
