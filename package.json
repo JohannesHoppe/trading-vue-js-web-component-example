@@ -1,0 +1,23 @@
+{
+  "name": "trading-vue-js-web-component-example",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "vue-cli-service serve",
+    "build-and-serve": "npm run build && http-server dist -o",
+    "build": "npm run build:custom-element && npm run build:cleanup",
+    "build:custom-element": "vue-cli-service build --target lib --name chart-wrapper src/main-custom-element.js",
+    "build:cleanup": "rm ./dist/demo.html && cp ./public/demo.html ./dist/index.html"
+  },
+  "dependencies": {
+    "trading-vue-js": "^1.0.1",
+    "tvjs-overlays": "^0.3.0",
+    "vue": "^2.6.11",
+    "vue-custom-element": "^3.2.14"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "~4.5.0",
+    "http-server": "^0.12.3",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
