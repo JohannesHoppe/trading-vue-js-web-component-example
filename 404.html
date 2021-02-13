@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <script src="//unpkg.com/vue@2.6.11"></script>
+    <script src="//unpkg.com/@ungap/custom-elements/es.js"></script>
+    <script src="./chart-wrapper.umd.js"></script>
+
+    <title>chart-wrapper demo</title>
+  </head>
+  <body>
+    
+    <h1>TradingVue.js web component example</h1>
+
+    <chart-wrapper width="1000" height="500"></chart-wrapper>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function(event) {
+
+        var data = {
+          "chart": {
+            "data": [
+              [1588737600000, 8977.38, 9047.4, 8970, 9001.6, 89.98],
+              [1588741200000, 9001, 9037.1, 8977.7, 9008.7, 106.69],
+              [1588744800000, 9008.8, 9039, 9000.7, 9021.02, 91.15],
+              [1588748400000, 9022.4, 9039, 8997.2, 9022.73, 105.57],
+              [1588752000000, 9022.78, 9106.9, 9001.6, 9040.16, 457.22],
+              [1588755600000, 9040.8, 9094, 9036.1, 9089.71, 135.48],
+              [1588759200000, 9089.8, 9294, 9068, 9238, 1523.25],
+              [1588762800000, 9237.7, 9345.6, 9205.8, 9322.9, 809.15],
+              [1588766400000, 9323, 9387, 9223, 9232.86, 1018.51],
+              [1588770000000, 9234, 9271.8, 9135, 9237.2, 562.04],
+              [1588773600000, 9237.2, 9258, 9201.6, 9236.8, 136.21],
+              [1588777200000, 9236.1, 9299.5, 9235.9, 9287.9, 180.81],
+              [1588780800000, 9285.3, 9319.7, 9262.1, 9308.1, 76.46]
+            ],
+            "settings": {}
+          },
+
+          "onchart": [
+            {
+              "name": "Simple Moving Average, 5",
+              "type": "SMA",
+              "data": [],
+              "settings": {
+                "length": 5,
+                "color": "#1592e6"
+              }
+            }
+          ]
+        }
+      
+        var comp = document.querySelector('chart-wrapper');
+        comp.newData = data;
+      });
+    </script>
+
+    <hr>
+    <a href="https://github.com/JohannesHoppe/trading-vue-js-web-component-example">Source on Github</a>
+
+  </body>
+</html>
